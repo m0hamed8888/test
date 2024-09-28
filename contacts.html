@@ -15,9 +15,11 @@
 </section>
 
 <script>
+    const PORT = 8000 || process.env.PORT;
+
 async function loadContacts() {
     try {
-        const response = await fetch('http://localhost:5000/api/contacts');
+        const response = await fetch(`http://localhost:${PORT}/api/contacts`);
         const contacts = await response.json();
 
         const contactsContainer = document.getElementById('contactsContainer');
