@@ -6,7 +6,7 @@ const dbURI = 'mongodb://localhost:27017/contactFormDB';
 
 
 const app = express();
-const PORT = 5000;
+const PORT = 8000 || process.env.PORT;
 
 // Middleware
 app.use(cors());
