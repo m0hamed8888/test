@@ -208,6 +208,8 @@
         <script src="main.js"></script>
     </body>
     <script>
+        const PORT = 8000 || process.env.PORT;
+
         function action(){
             alert("Sorry! soon will but all links")
         }
@@ -221,7 +223,7 @@
     };
 
     try {
-        const response = await fetch('http://localhost:5000/api/contact', {
+        const response = await fetch(`http://localhost:${PORT}/api/contact`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
